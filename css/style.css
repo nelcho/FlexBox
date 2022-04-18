@@ -1,0 +1,312 @@
+:root {
+    --azul: #0071b7;
+    --blanco: #FFF;
+    --naranja: #ff4f1e;
+}
+html {
+    font-size: 62.5%; /** 1REM = 10pX **/
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+  
+
+body {
+    background-color: var(--azul);
+    font-family:  'Lato', sans-serif;
+    font-size: 1.6rem;
+}
+
+h1, h2 {
+    color: var(--blanco);
+    text-align: center;
+    margin: 5rem 0;
+    padding: 1rem;
+}
+.caja-curso {
+    background-color: var(--naranja);
+    text-align: center;
+    color: var(--blanco);
+    padding: 5rem;
+
+}
+.caja-curso h1 {
+    margin: 0;
+}
+.caja-curso p {
+    font-size: 2.4rem;
+}
+.caja-curso a {
+    font-size: 2.4rem;
+    padding: 2rem;
+    display: inline-block;
+    text-decoration: none;
+    color: var(--blanco);
+    padding: 0;
+}
+
+
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+.box {
+    background-color: var(--naranja);
+    color: var(--blanco);
+    padding: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    border: 1rem solid #bb2b03;
+}
+
+.contenedor > div {
+    background-color: var(--blanco);
+    padding: 5rem;
+}
+
+
+
+
+
+/*** 1.- Display Flex ***/
+
+.d-flex {
+    /* Al colocar display flex los elementos se organizan de izquierda a derecha formando una fila */
+    display: flex;
+}
+
+
+
+/*** 2.- Flex Direction ***/
+
+.d-flex-2 {
+    display: flex;
+    /* Para cambiar la direccion de ubicacion de los elementos existen las siguientes posisciones */
+    
+    /* Posicion por defecto al colocar display flex, se organizan en una fila de izquierda a derecha*/
+    /* flex-direction: row; */
+    /* Organiza lo elementos en una columna de arriba hacia abajo */
+    /* flex-direction: column; */
+    /* Organiza los elementos de derecha a izquierda y los posiciona a la derecha */
+    flex-direction: row-reverse;
+    /* organiza los elementos en una columna invirtiendo el orden */
+    /* flex-direction: column-reverse; */
+}
+
+
+
+/*** 3.- Justify Content (Dirección Row) ***/
+
+.d-flex-3 {
+    display: flex;
+    /* Organiza los elementos horizontalmente a la izquierda es el valor por defecto y no cambia en nada la posicion del display flex */
+    /* justify-content: flex-start; */
+    /* Organiza los elementos horizontalmente a la derecha de la fila */
+    /* justify-content: flex-end; */
+    /* Organiza los elementos horizontalmente al centro de la fila */
+    /* justify-content: center; */
+    /* Organiza los elementos horizontalmente distribuyendo el espacio vacio entre ellos al rededor de cada elemento */
+    /* justify-content: space-around; */
+    /* Organiza los elementos horizontalmente distribuyendo el espacio vacio entre ellos pero dejando espacios mas parejos que el anterior */
+    justify-content: space-evenly;
+    /* Organiza los elementos horizontalmente distribuyendo el espacio vacio entre ellos colocando un elemento a la izquierda, uno a la derecha y los demas en el espacio restante */
+    /* justify-content: space-between; */
+}
+
+
+
+/*** 4.- Justify Content (Dirección Column) ***/
+
+.d-flex-4 {
+    display: flex;
+    flex-direction: column;
+    /* Define la altura del contenedor */
+    height: 100rem;
+
+    /* Organiza los elementos verticalmente de arriba hacia abajo es el valor por defecto y no cambia en nada la posicion del display flex */
+    /* justify-content: flex-start; */
+    /* Organiza los elementos verticalmente en la parte inferior de la columna*/
+    /* justify-content: flex-end; */
+    /* Organiza los elementos verticalmente al centro de la columna */
+    /* justify-content: center; */
+    /* Organiza los elementos verticalmente distribuyendo el espacio vacio entre ellos al rededor de cada elemento */
+    /* justify-content: space-around; */
+    /* Organiza los elementos verticalmente distribuyendo el espacio vacio entre ellos pero dejando espacios mas parejos que el anterior */
+    justify-content: space-evenly;
+    /* Organiza los elementos verticalmente distribuyendo el espacio vacio entre ellos colocando un elemento arriba, uno abajo y los demas en el espacio restante */
+    /* justify-content: space-between; */
+}
+
+
+
+/*** 5.- Align Items (Dirección Row) ***/
+
+.d-flex-5 {
+    display: flex;
+    /* Recordar que los elementos hijo tomaran toda la altura disponible por defecto haciendolos ver mas altos */
+    height: 100rem;
+
+    /* Es el valor por defecto de los elementos hijo que tomaran toda la altura de la fila */
+    /* align-items: stretch; */
+    /* Los elemetos hijo volveran a su tamaño normal y se ubicaran en la parte superior izquierda de la fila */
+    /* align-items: flex-start; */
+    /* Ordenara los elementos hijo en la parte central izquierda de la fila */
+    align-items: center;
+    /* Organiza los elementos en la parte inferior izquierda de la fila */
+    /* align-items: flex-end; */
+    /* Organiza los elementos hijo muy parecido al flex start pero toma como linea base el texto de los elementos */
+    /* align-items: baseline; */
+}
+
+
+
+/*** 6.- Align Items (Dirección Columna) ***/
+
+.d-flex-6 {
+    display: flex;
+    flex-direction: column;
+    height: 100rem;
+
+    /* Es el valor por defecto de los elementos hijo que tomaran toda el ancho de la columna */
+    /* align-items: stretch; */
+    /* Los elemetos hijo volveran a su tamaño normal y se ubicaran de arriba hacia abajo en la parte superior izquierda de la columna */
+    /* align-items: flex-start; */
+    /* Ordenara los elementos hijo de arriba hacia abajo en la parte central de la columna */
+    align-items: center;
+    /* Organiza los elementos de arriba hacia abajo en la parte Superior derecha de la columna */
+    /* align-items: flex-end; */
+    /* Organiza los elementos hijo muy parecido al flex start pero toma como linea base el texto de los elementos */
+    /* align-items: baseline; */
+}
+
+
+
+/*** 7.- Align Items y JustifyContent ***/
+
+.d-flex-7 {
+    /* Cuando los elementos hijo se organizan en una fila */
+    display: flex;
+    height: 100rem;
+
+    /* Organiza los elementos horizontalmente */
+    justify-content: center;
+    /* Organiza los elementos verticalmente */
+    align-items: flex-end;
+
+
+    /* Cuando los elementos hijo se organizan en una columna*/
+    /* display: flex; */
+    /* flex-direction:  column; */
+    /* height: 100rem; */
+
+    /* Organiza los elementos verticalmente */
+    /* justify-content: center; */
+    /* Organiza los elementos horizontalmente */
+    /* align-items: flex-end; */
+}
+
+
+
+/*** 8.- Flex Basis ***/
+
+.d-flex-8 {
+    display: flex;
+}
+
+/* Flex basis solo se aplica a elementos hijos */
+.d-flex-8 .box {
+    /* Da un porcentaje al contenido en este caso lo distribuye en tres partes */
+    flex-basis: 33.3%;
+    /* Da un valor inicial al contenido y a partir de alli sigue toamndo espacio si lo necesita */
+    flex-basis: 20rem;
+}
+
+
+
+/*** 9.- Gap y Calc ***/
+
+.d-flex-9 {
+    display: flex;
+    /* gap: 2rem; */
+    /* Se utiliza cuando no se usa gap */
+    justify-content: space-between;
+}
+
+/* Gap se aplica en el padre y Calc solo se aplica a elementos hijos */
+.d-flex-9 .box {
+    /* Se utiliza junto con gap para organizar varias columnas */
+    /* flex-basis: 33.3%; */
+    /* Es la manera antigua de organizar varias columnas sin el uso de gap */
+    flex-basis: calc(33.3% - 1rem);
+}
+
+/* Esta es otra forma de organizar columnas usuando el flex-basis con calc y sin el gap */
+.d-flex-9 .box:nth-child(1) {
+    flex-basis: calc(50% - 1rem);
+}
+.d-flex-9 .box:nth-child(2),
+.d-flex-9 .box:nth-child(3) {
+    flex-basis: calc(25% - 1rem);
+}
+
+
+
+/*** 10.- Flex Wrap ***/
+
+.d-flex-10 {
+    display: flex;
+    /* Genera un salto de linea formando una nueva fila cuando son muchos los elementos a ordenar */
+    flex-wrap: wrap;
+}
+
+.d-flex-10 .box {
+    flex-basis: 33.3%;
+}
+
+
+
+/*** 11.- Flex Grow ***/
+
+.d-flex-11 {
+    display: flex;
+}
+
+/* Flex-grow solo se aplica a elementos hijos */
+.d-flex-11 .box:nth-child(1) {
+    /* Genera un factor de crecimiento de 4 pixeles por cada pixel de los demas */
+    flex-grow: 4;
+}
+.d-flex-11 .box:nth-child(2) {
+    flex-grow: 1;
+}
+.d-flex-11 .box:nth-child(3) {
+    flex-grow: 1;
+}
+
+
+
+/*** 12.- Flex Shrink ***/
+
+.d-flex-12 {
+    display: flex;
+}
+
+.d-flex-12 .box {
+    flex-grow: 1;
+    flex-basis: 30rem;
+}
+.d-flex-12 .box:nth-child(3) {
+    /* Genera un factor de reduccion del doble de los demas al reducirse el screen */
+    flex-shrink: 2;
+}
+
+
+
+/*** 13.- Flex Shorthand ***/
+
+.d-flex-13 {
+    display: flex;
+}
